@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import java.lang.*?>
+        <?import java.util.*?>
+        <?import javafx.scene.*?>
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+
+        <?import javafx.geometry.Insets?>
+        <?import javafx.scene.text.Font?>
+<VBox alignment='CENTER' spacing ="20.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.todolistapp.HelloController"
+      prefHeight="400.0" prefWidth="600.0" style="-fx-background-color:DODGERBLUE;">
+    <Label textAlignment="CENTER" text="Todo List" style="-fx-font-weight:bold; -fx-font-family:Sans Serif; -fx-text-fill:#ffffff; -fx-font-size:50; "  >
+
+    </Label>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <HBox spacing="20.0">
+        <TextField fx:id="newTodoList" style="" text="Enter todolist items" HBox.hgrow="ALWAYS"/>
+        <Button text ="+"  onMouseClicked="#onAddButtonClick" HBox.hgrow="NEVER"/>
+    </HBox>
+    <ListView fx:id="todoListView" onMouseClicked="#handleClickListview" HBox.hgrow="ALWAYS"/>
+
+    <HBox spacing="10.0">
+        <Button text="Edit" HBox.hgrow="NEVER"/>
+        <Button text="Delete" onMouseClicked="#onDeleteButtonClick" HBox.hgrow="NEVER"/>
+    </HBox>
+
+</VBox>
+

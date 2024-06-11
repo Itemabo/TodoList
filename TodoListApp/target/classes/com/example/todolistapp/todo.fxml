@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.todolistapp.TodoController"
+      spacing="10" alignment="CENTER" style="-fx-background-color: grey;">
+
+    <Text text="Todo List" style="-fx-font-size: 75;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="taskInput" promptText="Enter task" prefHeight="80" style="-fx-font-size: 35;"/>
+        <Button text="+" onAction="#handleAddTask"  style="-fx-background: none; -fx-font-size: 35; -fx-border-radius: 200;"/>
+    </HBox>
+
+    <VBox fx:id="taskList" spacing="10" alignment="CENTER" prefHeight="350" style="-fx-background-color: #555555; -fx-margin-right:100;">
+          <HBox spacing="10" alignment="CENTER">
+                <CheckBox/>
+                <Text text="Wash plates" style="-fx-font-size: 35;"/>
+                <Button text="Edit"  style="-fx-background: none; -fx-font-size: 15;"/>
+                <Button text="Delete"  style="-fx-background: none; -fx-font-size: 15;"/>
+          </HBox>
+          <HBox spacing="10" alignment="CENTER">
+                <CheckBox/>
+                <Text text="Sweep" style="-fx-font-size: 35;"/>
+                <Button text="Edit" style="-fx-background: none; -fx-font-size: 15;"/>
+                <Button text="Delete" style="-fx-background: none; -fx-font-size: 15;"/>
+        </HBox>
+    </VBox>
+</VBox>
